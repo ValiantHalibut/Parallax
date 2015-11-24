@@ -1,0 +1,51 @@
+// Animation Global Classes
+.fixed {
+	position: fixed !important;
+}
+.absolute {
+	position: absolute !important;
+}
+body {
+	margin: 0px;
+	height: 300%;
+	.left {
+		width: 50%;
+		height: 100%;
+		background-color: blue;
+		position: absolute;
+		left: 0;
+	}
+	.right {
+		width: 50%;
+		height: 100%;
+		background-color: red;
+		position: absolute;
+		right: 0;
+	}
+	.spinner {
+		width: 50px;
+		height: 50px;
+		position: fixed;
+		background-color: green;
+		//transition: all .1s;
+		opacity: 0;
+		//border-color: black;
+		//border-style: solid;
+		&.s-1 {
+			top: 100;
+			left: 100;
+		}
+		&.s-2 {
+			top: 200;
+			left: 200;
+		}
+		&.s-3 {
+			top: 300;
+			left: 300;
+		}
+		&.s-4 {
+			top: 400;
+			left: 400;
+		}
+	}
+}
