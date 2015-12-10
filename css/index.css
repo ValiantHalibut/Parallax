@@ -21,6 +21,12 @@ body .right {
   background-color: red;
   position: absolute;
   right: 0;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/2/2f/Greist_Building.JPG");
+  background-size: auto 100%;
+}
+body .right.right_step1 {
+  position: absolute !important;
+  top: 100%;
 }
 body .spinner {
   width: 50px;

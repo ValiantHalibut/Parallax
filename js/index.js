@@ -79,6 +79,27 @@ var testApp = {
 					]
 				}
 			]
+		},
+		{
+			selector: ".right",
+			start: 1,
+			end: 2.5,
+			mods: [
+				{
+					classToggle: true,
+					name: "right_step1",
+					frames: [
+						{
+							position: 0,
+							value: 1
+						},
+						{
+							position: 1,
+							value: 0
+						}
+					]
+				}
+			]
 		}
 	],
 	init: function(){
@@ -192,6 +213,16 @@ var testApp = {
 			while(eNum--) {
 				var matrixArray = Matrix.getMatrix(el[eNum]);
 				el[eNum].style.transform = Matrix.getCombinedCss(matrixArray, result);
+			}
+		} else if (mod.classToggle) {
+			if(result > 0) {
+				result = true;
+			} else {
+				result = false;
+			}
+			while(eNum--) {
+				if(result) el[eNum].classList.add(mod.name);
+				else el[eNum].classList.remove(mod.name);
 			}
 		}
 	}
